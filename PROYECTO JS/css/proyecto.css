@@ -1,0 +1,27 @@
+
+
+.btn-primary{
+    width:100px;
+}
+
+.otro{
+    flex-direction: column;
+    padding:50px;
+    margin-top: 50px;
+    width:550px;
+}
+
+
+.entradas{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding:70px;
+    width:550px;
+}
+
+.divgrande{
+    display:flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}

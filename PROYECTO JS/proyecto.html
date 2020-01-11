@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Proyecto</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/proyecto.css">
+</head>
+
+<body>
+
+
+    <div class="divgrande">
+        <div class="entradas">
+
+            <form>
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">Nombre</label>
+                    <input type="text" class="form-control" id="value1"
+                        placeholder="name@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="formGroupExampleInput">precio</label>
+                    <input type="number" class="form-control" id="value2" placeholder="Example input placeholder">
+                  </div>
+                <label for="validationCustom04">Categoria</label>
+                <select class="custom-select" id="value3" required>
+                  <option selected disabled value="">Seleccione una cateogoria</option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                </select>
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Descripcion</label>
+                    <textarea class="form-control" id="value4" rows="3"></textarea>
+                </div>
+            </form>
+
+            <button type="button" class="btn btn-primary" onclick="inputValue()">Agregar</button>
+        </div>
+
+        <div class="otro">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">Buscar</span>
+                </div>
+                <input type="text" class="form-control" placeholder="Filtrar producto" aria-label="Username"
+                    aria-describedby="basic-addon1">
+            </div>
+
+            <ul class="list-group" id="lista">
+                <li class="list-group-item" id="li1">No hay productos</li>
+                
+            </ul>
+        </div>
+
+
+    </div>
+
+    <script src="js/proyecto.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
