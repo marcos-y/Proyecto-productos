@@ -20,20 +20,19 @@
             <form>
                 <div class="form-group">
                     <label for="exampleFormControlInput1">Nombre</label>
-                    <input type="text" class="form-control" id="value1"
-                        placeholder="name@example.com">
+                    <input type="text" class="form-control" id="value1" placeholder="name@example.com">
                 </div>
                 <div class="form-group">
                     <label for="formGroupExampleInput">precio</label>
                     <input type="number" class="form-control" id="value2" placeholder="Example input placeholder">
-                  </div>
+                </div>
                 <label for="validationCustom04">Categoria</label>
                 <select class="custom-select" id="value3" required>
-                  <option selected disabled value="">Seleccione una cateogoria</option>
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
+                    <option selected disabled value="">Seleccione una cateogoria</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
                 </select>
                 <div class="form-group">
                     <label for="exampleFormControlTextarea1">Descripcion</label>
@@ -54,9 +53,35 @@
             </div>
 
             <ul class="list-group" id="lista">
-                <li class="list-group-item" id="li1">No hay productos</li>
-                
+                <li class="list-group-item">No hay productos</li>
             </ul>
+        </div>
+
+        
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Descripcion del producto</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                       
+                        <p id="desc">
+
+                        </p>
+                        
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">cerrar</button>
+                    </div>
+                </div>
+            </div>
         </div>
 
 
