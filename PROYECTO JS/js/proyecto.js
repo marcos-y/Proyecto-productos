@@ -1,5 +1,6 @@
 class Producto {
-    constructor(nombre, precio, categoria, descripcion) {
+    constructor(id, nombre, precio, categoria, descripcion) {
+        this.id= id;
         this.nombre = nombre;
         this.precio = precio;
         this.categoria = categoria;
@@ -16,52 +17,35 @@ var inputValue = () => {
     let value2 = document.getElementById("value2").value;
     let value3 = document.getElementById("value3").value;
     let value4 = document.getElementById("value4").value;
-
-    let nuevoProd = new Producto(value1, value2, value3, value4);
+    let idProducto = productos.length + 1;
+    let nuevoProd = new Producto(idProducto,value1, value2, value3, value4);
     productos.push(nuevoProd);
     console.log(productos);
 
     //CREANDO EN EL DOM
     lista.innerHTML = lista.innerHTML + `
-        <li class="list-group-item" data-toggle="modal" data-target="#exampleModal" onclick="encontrar()" id="produ">
+        <li class="list-group-item" data-toggle="modal" data-target="#exampleModal" onclick=encontrar(${idProducto}) id="produ">
            ${value1}
         </li>`;
 }
 
 
-var encontrar = () => {
-
-    let name = document.getElementById("produ").innerHTML;
+var encontrar = (id) => {
+    console.log(id);
+    
+    name = name.replace(/\s/g,'');
     console.log(name);
 
-    let pos;
-    // BUSQUEDA CON ARRAY
-    for (let i = 0; i < productos.length; i++) {
-        if (productos[i].nombre === name) {
-           console.log('encontrado');
-            pos=i;
-            console.log('posicion:', pos);
-        }
-    }
-    
-    //MUESTRO PRODUCTO DEL ARRAY HECHO CON FOR
-    console.log(productos[pos]);
+    let produ = productos.filter(producto => {
+        return producto.id === id;
+    })
 
-    desc.innerHTML = `${productos[pos]}`
-
-    //OTRA FORMA!!!!!!!!:--------------------------------
-
-    //ASIGNO LA POS A BUSCADOR (DEVUELVE NUM, -1 SI NO EXISTE)
-    //let buscador = productos.indexOf(nombre); 
-    //console.log(buscador);
-    
-    //MUESTRO LO QUE HAY EN ESA POSICION DEL ARRAY
-    //console.log(productos[buscador]);
+    console.log(produ);
+    desc.innerHTML = `${produ[0].nombre},${produ[0].precio},${produ[0].categoria},${produ[0].descripcion}`;
 
 }
 
-
-
+//hacer reste formulario
 
 
 
