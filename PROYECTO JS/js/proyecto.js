@@ -19,10 +19,11 @@ var inputValue = () => {
 
     let nuevoProd = new Producto(value1, value2, value3, value4);
     productos.push(nuevoProd);
+    console.log(productos);
 
     //CREANDO EN EL DOM
     lista.innerHTML = lista.innerHTML + `
-        <li class="list-group-item" data-toggle="modal" data-target="#exampleModal">
+        <li class="list-group-item" data-toggle="modal" data-target="#exampleModal" onclick="encontrar()" id="produ">
            ${value1}
         </li>`;
 }
@@ -30,7 +31,32 @@ var inputValue = () => {
 
 var encontrar = () => {
 
+    let name = document.getElementById("produ").innerHTML;
+    console.log(name);
+
+    let pos;
+    // BUSQUEDA CON ARRAY
+    for (let i = 0; i < productos.length; i++) {
+        if (productos[i].nombre === name) {
+           console.log('encontrado');
+            pos=i;
+            console.log('posicion:', pos);
+        }
+    }
     
+    //MUESTRO PRODUCTO DEL ARRAY HECHO CON FOR
+    console.log(productos[pos]);
+
+    desc.innerHTML = `${productos[pos]}`
+
+    //OTRA FORMA!!!!!!!!:--------------------------------
+
+    //ASIGNO LA POS A BUSCADOR (DEVUELVE NUM, -1 SI NO EXISTE)
+    //let buscador = productos.indexOf(nombre); 
+    //console.log(buscador);
+    
+    //MUESTRO LO QUE HAY EN ESA POSICION DEL ARRAY
+    //console.log(productos[buscador]);
 
 }
 
